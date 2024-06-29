@@ -12,18 +12,25 @@ const transactionSlice = createSlice({
     initialState,
     reducers: {
         nuevaTransaccion: (state, action) => {
-            state.push(action.payload)
+            state.unshift(action.payload)
             agregarDataStorage(state)
         },
-        editar: (state, action) => {
+        editarTransaccion: (state, action) => {
+            const { transaction } = action.payload
+            const currentTransaction = state.find((item) => item.id === transaction.id)
+            console.log(currentTransaction);
 
-            
-
-            state.push(action.payload)
-            agregarDataStorage(state)
+            if (currentTransaction) {
+                Object.assign(currentTransaction, transaction);
+                agregarDataStorage(state)
+            }
+        },
+        eliminarTransaccion: (state, action) => {
+            const listaActualizada = state.filter(item => item.id !== action.payload)
+            agregarDataStorage(listaActualizada)
         }
     }
 })
 
-export const { nuevaTransaccion } = transactionSlice.actions
+export const { nuevaTransaccion, editarTransaccion, eliminarTransaccion } = transactionSlice.actions
 export default transactionSlice.reducer

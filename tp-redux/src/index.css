@@ -1,9 +1,37 @@
 body{
+    --darkGrey: #1a1a1a;
+    --grey: #5a5353;
+    --ligthGrey: #e5e4e3;
+    --succes: #00cc00;
+    --green: #378c37;
+    --orange: #ff6c0e;
+    background-color: var(--ligthGrey);
+    color: var(--darkGrey);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+#root{
     display: flex;
     flex-direction: column;
     width: 100vw;
     box-sizing: border-box;
     align-items: center;
     justify-content: center;
-    padding: 32px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 1280px;
+    max-width: 1280px;
+    box-sizing: border-box;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 24px;
+    gap: 16px;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
 }

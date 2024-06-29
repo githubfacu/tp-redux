@@ -1,0 +1,21 @@
+.containerDiv{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.containerDiv table th{
+    border: 1px solid black;
+    background-color: var(--darkGrey);
+    color: white;
+    padding: 1px 4px 2px;
+}
+
+.containerDiv table td{
+    border: 1px solid black;
+    padding: 1px 4px 2px;
+}

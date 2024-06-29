@@ -1,0 +1,19 @@
+.headerContainer{
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 24px;
+    background-color: var(--darkGrey);
+    padding: 12px;
+    position: sticky;
+    top: 0;
+}
+
+.headerContainer a{
+    color: var(--ligthGrey);
+    padding: 4px 8px;
+    text-decoration: none;
+    font-weight: 500;
+}

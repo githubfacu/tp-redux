@@ -1,0 +1,30 @@
+.containerDiv{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 16px 8px;
+    user-select: none;
+}
+
+.containerDiv table{
+    width: 100%;
+}
+
+.containerDiv table th{
+    text-align: start;
+}
+
+.containerDiv td{
+    padding: 0;
+    text-align: start;    
+}
+
+.descripcion{
+    max-width: 120px;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
