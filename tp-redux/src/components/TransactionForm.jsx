@@ -11,8 +11,9 @@ export const TransactionForm = ({actionType, currentTransaction, switchOff}) => 
 
     const date = new Date
     const today = date.toLocaleDateString().split('/')
+    const day = today[0].length > 1 ? today[0] : `0${today[0]}`
     const month = today[1].length > 1 ? today[1] : `0${today[1]}`
-    const fechaInicial = `${today[2]}-${month}-${today[0]}`
+    const fechaInicial = `${today[2]}-${month}-${day}`
 
     const [fecha, setFecha] = useState(fechaInicial)
     const [categoria, setCategoria] = useState('')
